@@ -35,7 +35,7 @@ El proyecto cuenta con integración completa con **Firebase** para gestión de u
 
 ## ✒️ Autor
 
-* **Desarrollador:** ERJAN
+* **Desarrollador:** YERZHAN
 * **Objetivo:** Proyecto nº 2 del Portfolio Web Frontend (España).
 
 > *Aviso: Este producto utiliza la API de TMDB pero no está avalado ni certificado por TMDB.*
