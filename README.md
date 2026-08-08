@@ -74,7 +74,7 @@ The project features full **Firebase** integration for user management (Authenti
 
 ## ✒️ Author
 
-* **Developer:** ERJAN
+* **Developer:** YERZHAN
 * **Goal:** Project #2 for Frontend Developer Portfolio (Spain).
 
 > *Disclaimer: This product uses the TMDB API but is not endorsed or certified by TMDB.*
