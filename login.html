@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>html{background-color:#0F0F14;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Palomita — Iniciar sesión</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=optional" rel="stylesheet">
+    <script type="module" src="js/firebase-config.js"></script>
+</head>
+<body>
+
+ <header class="header-login">
+    <h1>🍿 Palomita</h1>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Inicio</a>
+        <a href="search.html" class="nav-link" data-i18n="nav_search">Buscar</a>
+        <a href="favorites.html" class="nav-link" data-i18n="nav_favorites">Favoritos</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">Acerca de</a>
+    </nav>
+    
+    <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ru">RU</button>
+</div>
+<div id="auth-status" class="auth-status"></div>
+</header>
+
+<main>
+    <div class="auth-container">
+        <h2 id="auth-title" data-i18n="auth_login_title">Iniciar sesión</h2>
+
+        <form id="auth-form">
+            <input type="email" id="auth-email" placeholder="Email" required>
+            <div class="password-field">
+    <input type="password" id="auth-password" placeholder="Contraseña" required>
+    <button type="button" id="toggle-password" class="toggle-password-btn" aria-label="Mostrar contraseña">
+        <svg viewBox="0 0 24 24" width="18" height="18">
+            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+    </button>
+</div>
+            <button type="submit" class="auth-submit-btn" id="auth-submit-btn" data-i18n="auth_login_btn">Iniciar sesión</button>
+        </form>
+
+        <p id="auth-error" class="auth-error hidden"></p>
+
+        <p class="auth-switch">
+            <span id="auth-switch-text" data-i18n="auth_switch_to_register">¿No tienes cuenta?</span>
+            <a href="#" id="auth-switch-link" data-i18n="auth_switch_link_register">Regístrate</a>
+        </p>
+    </div>
+</main>
+
+    <footer>
+    <p data-i18n="footer_text">Datos proporcionados por TMDB</p>
+    </footer>
+    
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    
+</body>
+</html>

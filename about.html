@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>html{background-color:#0F0F14;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Palomita — Sobre el proyecto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=optional" rel="stylesheet">
+    <script type="module" src="js/firebase-config.js"></script>
+</head>
+<body>
+
+ <header class="header-about">
+    <h1>🍿 Palomita</h1>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Inicio</a>
+        <a href="search.html" class="nav-link" data-i18n="nav_search">Buscar</a>
+        <a href="favorites.html" class="nav-link" data-i18n="nav_favorites">Favoritos</a>
+        <a href="about.html" class="nav-link active" data-i18n="nav_about">Acerca de</a>
+    </nav>
+
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+    <div id="auth-status" class="auth-status"></div>
+</header>
+    
+<main>
+    <section class="about-section">
+        <h2 data-i18n="about_title">Acerca de Palomita</h2>
+        <p data-i18n="about_text_1">Palomita es un catálogo de películas y series creado como proyecto de portafolio, con el objetivo de practicar JavaScript, trabajo con el DOM y consumo de APIs externas.</p>
+        <p data-i18n="about_text_2">Todos los datos de películas, pósteres y sinopsis provienen de la API pública de TMDB (The Movie Database).</p>
+        <p class="about-attribution" data-i18n="about_attribution">Este producto usa la API de TMDB pero no está respaldado ni certificado por TMDB.</p>
+    </section>
+</main>
+
+    <footer>
+    <p data-i18n="footer_text">Datos proporcionados por TMDB</p>
+    </footer>
+    
+    
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    
+</body>
+</html>

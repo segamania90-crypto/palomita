@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>html{background-color:#0F0F14;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Palomita — Catálogo de películas y series</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=optional" rel="stylesheet">
+</head>
+    <script type="module" src="js/firebase-config.js"></script>
+<body>
+
+ <header class="header-home">
+    <h1>🍿 Palomita</h1>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link active" data-i18n="nav_home">Inicio</a>
+        <a href="search.html" class="nav-link" data-i18n="nav_search">Buscar</a>
+        <a href="favorites.html" class="nav-link" data-i18n="nav_favorites">Favoritos</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">Acerca de</a>
+    </nav>
+    <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ru">RU</button>
+</div>
+<div id="auth-status" class="auth-status"></div>
+</header>
+
+<main>
+    <section class="movie-section">
+        <h2 data-i18n="section_popular">Populares ahora</h2>
+        <div id="popular-grid" class="movies-grid"></div>
+    </section>
+
+    <section class="movie-section">
+        <h2 data-i18n="section_top_rated">Mejor valoradas</h2>
+        <div id="top-rated-grid" class="movies-grid"></div>
+    </section>
+
+    <section class="movie-section">
+        <h2 data-i18n="section_upcoming">Próximamente</h2>
+        <div id="upcoming-grid" class="movies-grid"></div>
+    </section>
+</main>
+
+<div id="movie-modal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button id="modal-close" class="modal-close">✕</button>
+        <div id="modal-body">
+            <!-- Сюда JS будет вставлять детали фильма -->
+        </div>
+    </div>
+</div>
+
+    <footer>
+    <p data-i18n="footer_text">Datos proporcionados por TMDB</p>
+    </footer>
+    
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    
+</body>
+</html>
